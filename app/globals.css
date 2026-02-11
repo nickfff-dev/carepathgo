@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Poppins', 'Sans Serif';
+}
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 191 33% 29%; /* #315c62 - dark teal */
+    --primary-foreground: 0 0% 98%;
+    --secondary: 209 56% 55%; /* #548fc8 - blue */
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 209 56% 55%; /* #548fc8 */
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 191 33% 29%; /* #315c62 */
+    --chart-1: 191 33% 29%; /* #315c62 */
+    --chart-2: 209 56% 55%; /* #548fc8 */
+    --chart-3: 191 33% 40%; /* Lighter variant of #315c62 */
+    --chart-4: 209 56% 45%; /* Darker variant of #548fc8 */
+    --chart-5: 209 56% 65%; /* Lighter variant of #548fc8 */
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 191 33% 29%; /* #315c62 */
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 209 56% 92%; /* Very light #548fc8 */
+    --sidebar-accent-foreground: 191 33% 29%; /* #315c62 */
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 209 56% 55%; /* #548fc8 */
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 209 56% 55%; /* #548fc8 - brighter for dark mode */
+    --primary-foreground: 0 0% 9%;
+    --secondary: 191 33% 40%; /* Lightened #315c62 for dark mode */
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 191 33% 40%; /* Lightened #315c62 */
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 209 56% 55%; /* #548fc8 */
+    --chart-1: 209 56% 55%; /* #548fc8 */
+    --chart-2: 191 33% 45%; /* Lightened #315c62 */
+    --chart-3: 209 56% 65%; /* Lighter #548fc8 */
+    --chart-4: 191 33% 35%; /* Darker #315c62 */
+    --chart-5: 209 56% 45%; /* Darker #548fc8 */
+    --sidebar-background: 191 33% 20%; /* Darker #315c62 */
+    --sidebar-foreground: 0 0% 95.9%;
+    --sidebar-primary: 209 56% 55%; /* #548fc8 */
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 191 33% 28%; /* Slightly lighter than sidebar bg */
+    --sidebar-accent-foreground: 0 0% 95.9%;
+    --sidebar-border: 191 33% 28%;
+    --sidebar-ring: 209 56% 55%; /* #548fc8 */
+  }
+}
+
+@keyframes x-subtle {
+  0%, 100%{
+    transform: translateX(0);
+  }
+  50%{
+    transform: translateX(12px);
+  }
+  
+}
+
+@keyframes mid-subtle {
+  0%, 100%{
+    transform: translateX(-45vw);
+  }
+  50%{
+    transform: translateX(-44.5vw);
+  }
+  
+}
+@keyframes bounce-subtle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.animate-mid-subtle {
+  animation: mid-subtle 2.5s ease-in-out infinite;
+}
+.animate-bounce-subtle {
+  animation: bounce-subtle 2.5s ease-in-out infinite;
+}
+.animate-x-subtle{
+  animation: x-subtle 2.5s ease-in-out infinite;
+}
+.animate-bounce-once{
+  animation: bounce-subtle 2.5s ease-in-out;
+}
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
