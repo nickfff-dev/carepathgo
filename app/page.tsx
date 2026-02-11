@@ -1,5 +1,6 @@
 'use client'
 
+import AccordionDefaultOpen from '@/components/faq-custom'
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 
@@ -45,14 +46,14 @@ export default function Home() {
           </nav>
 
           {/* CTA Button */}
-          <Button className="bg-primary hover:bg-primary/90 text-white rounded-full font-bold px-12 py-6 hidden md:flex  leading-[1.2] capitalize md:text-lg">
+          <Button className="bg-primary hover:bg-primary/90 text-white rounded-full font-medium px-12 py-6 hidden md:flex leading-[1.2] capitalize md:text-lg">
             Get Started
           </Button>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden bg-[#f8f8f8]">
         {/* Decorative circles background */}
           <div className="absolute md:top-20 top-5 md:left-10 left-0 md:w-32 md:h-32 w-6 h-6 opacity-50  animate-x-subtle" >
           <img className='fill-inherit' src={'/assets/frame-1.svg'}/>
@@ -78,7 +79,7 @@ export default function Home() {
           </div>
 
           {/* Description */}
-          <p className="w-full text-lg text-muted-foreground leading-[1.6] text-balance font-bold">
+          <p className="w-full text-lg text-muted-foreground leading-[1.6] text-balance">
           <span className='text-primary'>carepath</span><span className='text-accent'>go</span> in partnership with DOSEVANA is a done-for-you medical partnership that pays off from Patient #1. We provide the HIPAA-compliant tech, 50-state physician network, and Semaglutide direct-to-patient fulfillment. <br/> You focus on attracting clients; we handle the logistics.
           </p>
 
@@ -98,7 +99,7 @@ export default function Home() {
       </section>
 
       {/* Trusted Section */}
-      <section className="relative bg-gradient-to-r from-primary via-primary to-primary/60 p-6 overflow-hidden lg:-mt-40 mb-6 py-12">
+      <section className="relative bg-gradient-to-r from-primary via-primary to-primary/60 p-6 overflow-hidden lg:-mt-40 py-12">
         {/* Decorative shapes */}
         
         <img className='absolute top-5 md:left-0 -left-10 w-20 h-20 animate-x-subtle' src={'/assets/frame-6.svg'}/>
@@ -122,7 +123,19 @@ export default function Home() {
         </div>
        
       </section>
-
+        <section className=' bg-[#f1f0f6] w-full py-8 px-4'>
+          <div className='max-w-6xl mx-auto'></div>
+          <h1 className='text-center md:text-5xl text-3xl font-bold mb-2 text-primary'>Platform <span className='text-accent'>Highlights</span></h1>
+          <p className='text-center mb-2 font-medium'>We handle the backend — you grow your business.</p>
+          <div className="flex md:flex-row flex-col md:justify-center md:items-start items-center md:gap-x-10">
+            
+            <div className='md:h-96 mt-5'>
+              <img className='rounded-3xl h-[75vh]' src={'/assets/platform-highlights.png'} ></img>
+            </div>
+           <AccordionDefaultOpen/>
+            
+                    </div>
+        </section>
       {/* Chat Button */}
       <div className="fixed bottom-2 right-1 bg-primary hover:bg-primary/90 text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg cursor-pointer transition-all">
         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">

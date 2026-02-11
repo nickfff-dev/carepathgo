@@ -6,7 +6,7 @@ import './globals.css'
 
 const _geist = Geist({ subsets: ['latin'] })
 const _geistMono = Geist_Mono({ subsets: ['latin'] })
-const _poppins = Poppins({weight: ['100','200', ]})
+const _poppins = Poppins({weight: ['100','200', '300', '400', '500', '600', '700', '800', '900' ]})
 
 export const metadata: Metadata = {
   title: 'DoseVana - Scalable Wellness Solution',
@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-family:${_poppins.className}`}>{children}</body>
+      <body>{children}</body>
     </html>
   )
 }
