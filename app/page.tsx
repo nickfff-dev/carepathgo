@@ -98,25 +98,26 @@ export default function Home() {
       </section>
 
       {/* Trusted Section */}
-      <section className="relative bg-gradient-to-r from-primary via-primary to-primary/60 p-6 overflow-hidden lg:-mt-32">
+      <section className="relative bg-gradient-to-r from-primary via-primary to-primary/60 p-6 overflow-hidden lg:-mt-40 mb-6 py-12">
         {/* Decorative shapes */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-white/5 rounded-full -translate-x-1/2 -translate-y-1/2" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-white/5 rounded-full translate-x-1/2 translate-y-1/2" />
+        
+        <img className='absolute top-5 md:left-0 -left-10 w-20 h-20 animate-x-subtle' src={'/assets/frame-6.svg'}/>
+        <img className='absolute md:-top-24 md:-right-12 -right-2 -top-1 md:w-64 w-20  -translate-x-1/2 -translate-y-1/2 animate-x-subtle' src={'/assets/frame-8.svg'}/>
+        <img className='absolute bottom-0 -right-6 w-20 h-20  -translate-y-1/2' src={'/assets/frame-6.svg'}/>
 
-        <div className="relative max-w-7xl mx-auto px-4 lg:px-6 text-center space-y-4">
-          <h2 className="text-4xl md:text-6xl font-bold text-white text-balance">
+        <div className="relative max-w-7xl mx-auto px-4 lg:px-6 text-center">
+          <h2 className="text-4xl md:text-6xl font-bold text-white text-balance mb-3">
             Trusted by Top Wellness <br/>
             Organizations Nationwide
        </h2>
-          <p  className='text-white'>Powering the Next Generation of Wellness Clinics and Fitness Centers</p>
-          <div className="grid md:grid-cols-4 grid-cols-2 gap-x-4 justify-items-center items-center">
-            <img src={'/assets/logos/ufc.png'}/>
-            <img src={'/assets/logos/ufc.png'}/>
-            <img src={'/assets/logos/ufc.png'}/>
-            <img src={'/assets/logos/ufc.png'}/>
-            <img src={'/assets/logos/ufc.png'}/>
-            <img src={'/assets/logos/ufc.png'}/>
-            <img src={'/assets/logos/ufc.png'}/> 
+          <p  className='text-white mb-12'>Powering the Next Generation of Wellness Clinics and Fitness Centers</p>
+          <div className="md:flex md:justify-center md:gap-x-32 md:flex-wrap gap-y-6 grid grid-cols-2 gap-x-4">
+            <img src={'/assets/logos/ufc.png'} className='w-40'/>
+            <img src={'/assets/logos/md360.svg'} className='w-40'/>
+            <img src={'/assets/logos/rizz.svg'}className='w-40'/>
+            <img src={'/assets/logos/ufc-gym.svg'}className='w-40'/>
+            <img src={'/assets/logos/nexgen.svg'}className='w-40'/>
+            <img src={'/assets/logos/docuspa.svg'}className='w-40'/>
           </div>
         </div>
        
